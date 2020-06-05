@@ -7,6 +7,7 @@ var Student = /** @class */ (function () {
     }
     return Student;
 }());
+var user = new Student("Jane", "M.", "User");
 // when the type can be anything you use any
 function debug(value) { }
 ;
@@ -57,5 +58,21 @@ var myUnchangingUser = {
 // where you treat code as literals inline. "as const" also
 // works with arrays:
 var exampleUsers = [{ name: "Brian" }, { name: "Fahrooq" }];
-var user = new Student("Jane", "M.", "User");
+// For example:
+var handleArtistsResponse = function (response) {
+    if (response.error) {
+        console.error(response.error.message);
+        return;
+    }
+    console.log(response.artists);
+};
+// Now you can only create a request when you include
+// artistID and either html or markdown
+var workingRequest = {
+    artistID: "banksy",
+    markdown: "Banksy is an anonymous England-based graffiti artist..."
+};
+var badRequest = {
+    artistID: "banksy"
+};
 document.body.textContent = greeter(user);

@@ -25,9 +25,37 @@ allowsAnyString(hiWorld);
 function allowsOnlyHello(arg) { }
 ;
 allowsOnlyHello(helloWorld);
-allowsOnlyHello(hiWorld); // this gives an error-message
+//allowsOnlyHello(hiWorld); // this gives an error-message in the terminal
+// This lets you declare APIs which use unions to say it
+// only accepts a particular literal:
+function allowsFirstFiveNumbers(arg) { }
+;
+allowsFirstFiveNumbers(1);
+//allowsFirstFiveNumbers(10); // this gives an error-message in the terminal
 function greeter(person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
+// At first glance, this rule isn't applied to complex objects.
+var myUser = {
+    name: "Sabrina"
+};
+// See how it transforms `name: "Sabrina"` to `name: string`
+// even though it is defined as a constant. This is because
+// the name can still change any time:
+myUser.name = "Cynthia";
+// Because myUser's name property can change, TypeScript
+// cannot use the literal version in the type system. There
+// is a feature which will allow you to do this however.
+var myUnchangingUser = {
+    name: "Fatma"
+};
+// When "as const" is applied to the object, then it becomes
+// a object literal which doesn't change instead of a
+// mutable object which can.
+//myUnchangingUser.name = "Raîssa"; // gives error in the terminal
+// "as const" is a great tool for fixtured data, and places
+// where you treat code as literals inline. "as const" also
+// works with arrays:
+var exampleUsers = [{ name: "Brian" }, { name: "Fahrooq" }];
 var user = new Student("Jane", "M.", "User");
 document.body.textContent = greeter(user);

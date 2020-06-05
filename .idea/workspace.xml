@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/../Angular/my-first-app/my-first-app/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/my-first-app/my-first-app/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Angular/my-first-app/my-first-app/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/my-first-app/my-first-app/src/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/greeter.js" beforeDir="false" afterPath="$PROJECT_DIR$/greeter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/greeter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/greeter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591348457623</updated>
-      <workItem from="1591348460206" duration="1625000" />
+      <workItem from="1591348460206" duration="2386000" />
     </task>
     <servers />
   </component>

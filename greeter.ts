@@ -142,7 +142,7 @@ const workingRequest: CreateArtistBioRequest = {
     markdown: "Banksy is an anonymous England-based graffiti artist..."
 }
 
-/* const badRequest: CreateArtistBioRequest = {
+/* const badRequest: CreateArtistBioRequest = { // deze geeft foutmeldingen omdat er geen markdown bij is.
     artistID: "banksy",
 }*/
 
